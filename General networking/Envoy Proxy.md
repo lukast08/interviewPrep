@@ -1,0 +1,1 @@
+- Self contained process designed to run alongside ([[Sidecar Container]]) every application server.

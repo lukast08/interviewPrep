@@ -1,0 +1,15 @@
+- Node is a single machine inside a cluster
+- All K8s nodes run in a single cluster
+- Each node runs:
+	- Kubelet: agent that talks to the control plane
+	- Container Runtime: containerd, etc.
+	- Kube proxy: Handles networking
+- Node can be either a worker node or control plane node
+- All nodes share the same etcd and cluster configuration
+## Control Plane Node
+- **Brain of the Kubernetes cluster**. It manages **what runs where**, maintains the desired state, and coordinates all the cluster’s activities.
+- Handles kubectl commands
+- Schedules pods
+- Maintains desired state (what should be running)
+- Watches for changes and failures and reacts
+- Talks to the worker nodes via the kubelet agent on each node

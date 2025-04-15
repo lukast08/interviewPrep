@@ -1,0 +1,6 @@
+- Can enhance/extend the functionality of the main container in a pod
+- Shares the same network, localhost, volumes etc. as the main container
+- Managed together with the main container
+- Common use case is to use a sidecar container to add features to the main app without any changes
+- **Is heavily modular and reusable**: same sidecar can be reused across many apps
+- Crucial in **service meshes** like **Istio**, where an Envoy proxy handles all incoming/outgoing traffic.
