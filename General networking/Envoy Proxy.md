@@ -1,1 +1,12 @@
 - Self contained process designed to run alongside ([[Sidecar Container]]) every application server.
+- Handles all traffic in and out of the pod
+- Responsibilities:
+	- Traffic routing: based on weight, header, path, version
+	- Service discovery: receives updates from the control plane to route to healthy pods only
+	- Load balancing: Can directly balance the load to a concrete pod thanks to a list of all healthy pods IP addresses behind another service thanks to control plane
+	- Traffic encryption using mutual TLS
+	- Observability: captures metrics, logs
+	- Retry & Timeout logic
+	- Circuit breaker
+	- Applies traffic policies from the control plane (e.g., deny lists, rate limits).
+	- Can fail over to backup services if configured.

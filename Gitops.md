@@ -1,0 +1,7 @@
+- Practically the kube repo
+- Files state how the infra should look like (4 replicas of webxp-api in exp instance) and the tooling of the repo deploys the changes
+- Benefits:
+	- Auditability: everything is in the history
+	- Security: everything needs approve, as it goes through Git
+	- Consistency: all envs synced from the same repo
+	- Ez rollback

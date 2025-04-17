@@ -1,0 +1,3 @@
+- Lower level than [[Deployments]]
+- Ensure that a specific number of pod replicas are running
+- Useful just when requiring a custom update orchestration or no updates at all

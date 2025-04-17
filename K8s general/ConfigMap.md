@@ -1,0 +1,5 @@
+- K8s object to store non-sensitive conf data as key-value pairs
+- Convenient for decoupling configuration from application code
+- Different ways how to use them:
+	- envFrom: by name reference
+	- valueFrom: configMapKeyRef: name reference + key

@@ -23,9 +23,14 @@
 - HTTP status codes: 2xx, 3xx, 4xx, 5xx
 
 ## OSI Model
-- 7-layer framework that describes how data moves from one device to another over a network
-- L7: HTTP APIs, URLs, DNS, app errors
-- L4: TCP/UDP, ports, connection issues
-- L3: IP routing, subnets, NAT, firewall rules
-- L2: Switch-level issues, MACs (rarely needed)
-- L1: Physical hardware (almost never your concern in cloud)
+- Splits the communication of two devices over a network into 7 abstraction layers
+1. Physical layer - hardware needed for network communication
+2. Data Link layer:
+	- takes raw bit from physical layer and organizes them into packets
+	- makes sure that the packets arrive at the correct destination
+3. Network layer: 
+	- Responsible for routing data across different networks
+	- IP addresses, etc.
+4. Transport layer: TCP, UDP
+5. Application Layer: Combination of the last three. SMTP, HTTP, FTP, DNS
+![[Pasted image 20250416161834.png]]

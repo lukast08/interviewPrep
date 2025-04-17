@@ -3,3 +3,4 @@
 - Often used as K8s Ingress controller:
 	- Ingress resources define routing rules
 	- NGINX reads the rules and applies them via its own config
+

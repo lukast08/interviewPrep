@@ -1,0 +1,15 @@
+- package an app with everything it needs to run consistently across environments
+- use Linux kernel features like namespaces and cgroups for isolation
+- much lighter and faster than VMs
+	- deal for building scalable, portable infrastructure — especially in orchestrated environments like Kubernetes
+- What happens after I run `docker run nginx`:
+	- Docker CLI talks to the docker deamon
+		- It check whether the image is locally available or pulls it
+	- Docker creates a container for the image
+		- Assigns container ID, sets up RW FS and mounts any specified volumes
+	- Docker sets up the environment
+		- ENV variables, networking, allocates resources
+	- Docker sets up isolation using Linux kernel features
+		- cgroups for resource control
+		- creates new PID namespace
+	- Runs the entrypoint command
